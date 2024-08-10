@@ -3,58 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的网页</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            text-align: center;
-        }
-        #clock {
-            font-size: 36px;
-        }
-        #quote {
-            font-style: italic;
-        }
-    </style>
+    <title>我的个人主页</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="clock"></div>
-    <div id="quote"></div>
-
-    <script>
-        function createCalendar() {
-    // 生成日历 HTML 结构
-}
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=Beijing&appid=your_api_key')
-            .then(response => response.json())
-            .then(data => {
-        // 显示天气信息
-    });
-        function updateBackground() {
-        const input = document.getElementById('backgroundImageInput');
-        document.body.style.backgroundImage = `url(${input.value})`;
-        }
-
-        function showTime() {
-            const now = new Date();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            const seconds = now.getSeconds().toString().padStart(2, '0');
-            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-        }
-
-        // 每秒更新一次时间
-        setInterval(showTime, 1000);
-
-        // 这里你可以添加获取每日名言的代码，例如从一个API获取
-        // 或者直接在JavaScript中写一个数组存储名言
-        const quotes = [
-            "努力不一定成功，但放弃一定失败。",
-            "时间是最好的医生，也是最残酷的杀手。",
-            // ... 更多名言
-        ];
-        const randomIndex = Math.floor(Math.random() * quotes.length);
-        document.getElementById('quote').textContent = quotes[randomIndex];
-    </script>
+    <div class="container">
+        <div class="clock">
+            <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+        </div>
+        <div class="profile">
+            <h2>个人介绍</h2>
+            <p>...</p>
+        </div>
+        <div class="calendar">
+            </div>
+        <div class="weather">
+            </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
