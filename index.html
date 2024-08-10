@@ -22,6 +22,19 @@
     <div id="quote"></div>
 
     <script>
+        function createCalendar() {
+    // 生成日历 HTML 结构
+}
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=Beijing&appid=your_api_key')
+            .then(response => response.json())
+            .then(data => {
+        // 显示天气信息
+    });
+        function updateBackground() {
+        const input = document.getElementById('backgroundImageInput');
+        document.body.style.backgroundImage = `url(${input.value})`;
+        }
+
         function showTime() {
             const now = new Date();
             const hours = now.getHours().toString().padStart(2, '0');
